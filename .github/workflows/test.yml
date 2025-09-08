@@ -27,7 +27,7 @@ jobs:
 
       - run: |
           cat ~/.ssh/id_rsa
-          ssh datafab@$100.84.66.128 << 'EOF'
+          ssh datafab@100.84.66.128 << 'EOF'
             echo "Hello World!" >> test
             cat test
           EOF
