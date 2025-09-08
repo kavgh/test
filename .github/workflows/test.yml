@@ -25,7 +25,7 @@ jobs:
           cat ~/.ssh/id_rsa
 
       - run: |
-          ssh -o "StrictHostKeyChecking no" datafab@dialog-dev.taild1bdd.ts.net << 'EOF'
-            echo "Hello World!" >> test
-            cat test
-          EOF
+          ssh -o "StrictHostKeyChecking no" datafab@dialog-dev.taild1bdd.ts.net "
+          echo 'hello world!' > test
+          cat test
+          "
