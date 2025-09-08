@@ -24,6 +24,8 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           cat ~/.ssh/id_rsa
 
+      - run: ping -c4 dialog-dev.taild1bdd.ts.net
+
       - run: |
           ssh -o "StrictHostKeyChecking no" datafab@dialog-dev.taild1bdd.ts.net "
           echo 'hello world!' > test
