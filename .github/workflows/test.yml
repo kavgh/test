@@ -17,11 +17,12 @@ jobs:
 
       - run: ip ad sh
 
-      # - name: Setup SSH creds
-      #   run: |
-      #     mkdir -p ~/.ssh
-      #     echo -e "${{ vars.SSH_KEY }}" > ~/.ssh/id_rsa
-      #     chmod 600 ~/.ssh/id_rsa
+      - name: Setup SSH creds
+        run: |
+          mkdir -p ~/.ssh
+          echo -e "${{ vars.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          cat ~/.ssh/id_rsa
 
       - run: |
           ssh -o "StrictHostKeyChecking no" datafab@dialog-dev.taild1bdd.ts.net << 'EOF'
