@@ -22,12 +22,10 @@ jobs:
           mkdir -p ~/.ssh
           echo -e "${{ vars.SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          echo -e "${{ vars.KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
-          cat ~/.ssh/known_hosts
 
       - run: |
           cat ~/.ssh/id_rsa
-          ssh datafab@100.84.66.128 << 'EOF'
+          ssh -o "StrictHostKeyChecking=no" datafab@100.84.66.128 << 'EOF'
             echo "Hello World!" >> test
             cat test
           EOF
