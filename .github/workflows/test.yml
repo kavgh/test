@@ -24,7 +24,7 @@ jobs:
       #     chmod 600 ~/.ssh/id_rsa
 
       - run: |
-          ssh -o "StrictHostKeyChecking no" datafab@100.84.66.128 << 'EOF'
+          ssh -o "StrictHostKeyChecking no" datafab@dialog-dev.taild1bdd.ts.net << 'EOF'
             echo "Hello World!" >> test
             cat test
           EOF
