@@ -11,8 +11,8 @@ jobs:
       - name: Tailscale
         uses: tailscale/github-action@v3
         with:
-          oauth-client-id: kwkFTXnZFA21CNTRL
-          oauth-secret: tskey-client-kwkFTXnZFA21CNTRL-MNh4yQQm3baotXzrMec8bazNSyi3Ahmg3
+          oauth-client-id: k23UKHKQvr11CNTRL
+          oauth-secret: tskey-client-k23UKHKQvr11CNTRL-VaZhVZB9i2hXCby6Boud2hAZzJ5PQH1Fb
           tags: tag:ci
 
       - run: ip ad sh
