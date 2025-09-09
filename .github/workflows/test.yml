@@ -20,7 +20,7 @@ jobs:
       - name: Setup SSH creds
         run: |
           mkdir -p ~/.ssh
-          echo "${{ vars.SSH_KEY }}" > ~/.ssh/id_rsa
+          echo -e "${{ vars.SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           cat ~/.ssh/id_rsa
 
