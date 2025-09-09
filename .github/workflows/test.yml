@@ -26,7 +26,8 @@ jobs:
 
       - run: |
           echo "${{ vars.json_file }}" >> json
-          cat json
+          cat json > test
+          cat test
       # - run: ping -c4 100.84.66.128
 
       # - run: |
