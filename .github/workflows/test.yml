@@ -25,9 +25,8 @@ jobs:
           cat ~/.ssh/id_rsa
 
       - run: |
-          echo "${{ vars.json_file }}" >> json
-          cat json > test
-          cat test
+          echo -e "${{ vars.json_file }}" >> json
+          cat json
       # - run: ping -c4 100.84.66.128
 
       # - run: |
