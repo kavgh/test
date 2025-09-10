@@ -24,17 +24,17 @@ jobs:
           mkdir -p ~/.ssh
           echo -E "${{ vars.SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 100.84.66.128 >> ~/.ssh/knwon_hosts
-          cat ~/.ssh/id_rsa
-          cat ~/.ssh/known_hosts
-
-      - run: |
-          echo -E '${{ vars.json_file }}' >> json
-          cat json
-      # - run: ping -c4 100.84.66.128
+          # ssh-keyscan -H 100.84.66.128 >> ~/.ssh/knwon_hosts
+          # cat ~/.ssh/id_rsa
+          # cat ~/.ssh/known_hosts
 
       # - run: |
-      #     ssh -o "StrictHostKeyChecking no" datafab@dialog-dev.taild1bdd.ts.net "
-      #     echo 'hello world!' > test
-      #     cat test
-      #     "
+      #     echo -E '${{ vars.json_file }}' >> json
+      #     cat json
+      - run: ping -c4 100.84.66.128
+
+      - run: |
+          ssh -o "StrictHostKeyChecking no" datafab@dialog-dev.taild1bdd.ts.net "
+          echo 'hello world!' > test
+          cat test
+          "
