@@ -11,11 +11,11 @@ jobs:
       - name: Tailscale
         uses: tailscale/github-action@v3
         with:
-          authkey: "tskey-auth-kEoapfkj5U11CNTRL-XAMXHRL9kbTFMCrdo7JfbT68K2srZ2gP3"
-          statedir: /tmp/taleskale-state/
-          # oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
-          # oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
-          # tags: tag:ci
+          # authkey: "tskey-auth-kEoapfkj5U11CNTRL-XAMXHRL9kbTFMCrdo7JfbT68K2srZ2gP3"
+          # statedir: /tmp/taleskale-state/
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          action: apply
           
       # - run: ip ad sh
 
